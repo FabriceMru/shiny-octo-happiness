@@ -1,105 +1,176 @@
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 /* reset */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-size: 0.6rem;
-    font-weight: 500; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bilbo", cursive;
+  font-weight: 500;
+  overflow: hidden;
+  gap: 10px;
 }
 
 body {
-    background-image: url(/Images/Peter/constantino-co-7VHb2vO2r18-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(10, 10, 10);
-    height: 100vh;
+  background-image: url(/Images/Peter/constantino-co-7VHb2vO2r18-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(10, 10, 10);
+  height: 100vh;
+  width: 100vw;
 }
 /* ------------------------------------------------------------------------------ */
 h1 {
-    font-size: 7rem;
-    text-align: center;
-    padding-top: 5rem;
-    color: antiquewhite;
-    text-shadow: 4px 6px 9px rgba(0,0,0,0.82);
+  font-size: 12rem;
+  text-align: center;
+  padding-top: 5rem;
+  color: antiquewhite;
+  text-shadow: 4px 6px 9px rgba(0, 0, 0, 0.82);
 }
 
+p {
+}
 
-.card-container {
+.character-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.character-gandalf {
+  grid-area: 1 / 1 / 3 / 4;
+}
+
+.row-left-img1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.row-left-charactername {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.row-middle {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "row-middle-about"
+    "row-middle-skizze";
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.row-middle-about {
+  grid-area: row-middle-about;
+}
+
+.row-middle-skizze {
+  grid-area: row-middle-skizze;
+}
+
+.row-right-characterdetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "details-lio details-rio"
+    "details-liu details-riu";
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.details-lio {
+  grid-area: 1 / 2 / 3 /4;
+}
+
+.details-rio {
+  grid-area: 1 / 2 / 3 /4;
+}
+
+.details-liu {
+  grid-area: 1 / 2 / 3 /4;
+}
+
+.details-riu {
+  grid-area: 1 / 2 / 3 /4;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* .card-container {
     display: flex;
     justify-content: center;
     flex: 1 100%;
     flex-flow: row wrap;
     gap: 20px;
     margin-top: 20px;
-}
+} */
 
-.card {
-    width: 250px;
-    border-radius: 20px;
-    background-color: black;
-    color: antiquewhite;
-    overflow: hidden;
-    transition: transform 0.8s ease;
-    box-shadow: 17px 13px 18px 40px rgba(0,0,0,0.22);  
-    margin: 20px;
-}
+/* .card {
+  width: 250px;
+  border-radius: 20px;
+  background-color: black;
+  color: antiquewhite;
+  overflow: hidden;
+  box-shadow: 17px 13px 18px 40px rgba(0, 0, 0, 0.22);
+  margin: 20px;
+} */
 
-.card:hover {
-    transform: translate(-20px);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px 20px;
+/* .card-content {
+  padding: 20px 20px;
 }
 
 .card-content h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .card-content .more {
-    display: inline-block;
-    color: white;
-    padding: 2px 2px;
-    font-size: 16px;
-    text-decoration: none;
-    background-color: rgb(54, 51, 51);
-    border-radius: 8px;
-    margin-top: 16px;
-}
+  display: inline-block;
+  color: white;
+  padding: 2px 2px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: rgb(54, 51, 51);
+  border-radius: 8px;
+  margin-top: 16px;
+} */
 
-button {
-    display: inline-block;
-    justify-content: end;
-    background-color: #DD7921;
-    border-radius: 10px;
-    border: 3px double antiquewhite;
-    text-shadow: 4px 6px 9px rgba(0,0,0,0.82);
-    text-align: center;
-    padding: 10px;
-    width: 100px;
-    cursor: pointer;
-    margin-top: 50px;
+/* button {
+  display: inline-block;
+  justify-content: end;
+  background-color: #dd7921;
+  border-radius: 10px;
+  border: 3px double antiquewhite;
+  text-shadow: 4px 6px 9px rgba(0, 0, 0, 0.82);
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 50px;
 }
 
 .back {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .link {
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 14px;
-    color: #eeeeee;
-}
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #eeeeee;
+} */
+
+/* p {
+  font-size: 50px;
+  color: rebeccapurple;
+  background-color: black;
+} */
